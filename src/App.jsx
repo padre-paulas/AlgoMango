@@ -1,6 +1,6 @@
 //import { useState } from 'react'
 import './App.css'
-import Quicksort from './Quicksort'
+import Quicksort from './Quicksort/Quicksort'
 
 function App() {
   //const [count, setCount] = useState(0)

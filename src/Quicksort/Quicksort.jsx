@@ -1,3 +1,4 @@
+import Slider from "./Slider";
 const Quicksort = (props) => {
   const { numberOfElements, timePerOperation, value } = props;
 
@@ -10,15 +11,11 @@ const Quicksort = (props) => {
       <h2 className="mt-4">Info</h2>
       <div>
         <p>Number of elements: {numberOfElements}</p>
-        <div className="h-1 w-35 bg-white mx-auto mt-6 rounded-full"></div>
+        <Slider value={value} />
       </div>
       <div className="mb-40">
         <p>Time per operation, ms: {timePerOperation}</p>
-        <input className="h-1 w-35
-        bg-transparent
-        " min="0" max="1000" value={value} type="range"
-        style={{ accentColor: 'white',  }}
-        ></input>
+        <Slider value={value} />
       </div>
     </div>
   </div>
