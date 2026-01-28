@@ -10,9 +10,4 @@ const quicksortFunc = (array) => {
   return [...quicksortFunc(less), array[pivotIndex], ...quicksortFunc(greater)];
 }
 
-const array = [1, 5, 3, 6, 33, 54, 2];
-console.log(quicksortFunc(array));
-const array2 = [56, 4, 678, 10, 100, 0, 1, 3, -4, -65];
-console.log(quicksortFunc(array2));
-
 export default quicksortFunc;
