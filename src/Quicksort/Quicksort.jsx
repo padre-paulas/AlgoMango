@@ -5,6 +5,7 @@ import SliderTime from "./SliderTime";
 // import quicksortFunc from "./quicksort-func";
 import ButtonStart from "./ButtonStart";
 import generateArray from "./generate-array";
+
 const Quicksort = () => {
   const [ numberOfElements, setNumberOfElements ] = useState(50);
   const [ timePerOperation, setTimePerOperation ] = useState(50);
@@ -29,7 +30,7 @@ const Quicksort = () => {
     active:text-xs
     ">START</button> */}
 
-    <ButtonStart setArray={setArray} array={array} barRefs={barRefs} />
+    <ButtonStart array={array} barRefs={barRefs} timePerOperation={timePerOperation} />
       
     </div>
     <div className="grid justify-center text-center m-2
