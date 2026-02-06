@@ -1,4 +1,4 @@
-const QuicksortBars = ({ array = [], barRefs }) => {
+const ArrayBars = ({ array = [], barRefs }) => {
   const width = 100 / array.length;
   return <div  className="flex items-end place-self-center w-[98%] h-full">
     {array.map((element, i) => {
@@ -11,4 +11,4 @@ const QuicksortBars = ({ array = [], barRefs }) => {
   </div>
 }
 
-export default QuicksortBars;
+export default ArrayBars;
