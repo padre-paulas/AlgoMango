@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import ArrayBars from "../shared/ArrayBars";
+import ArrayBars from "../../shared-global/ArrayBars";
 import SliderNumber from "../../shared-global/SliderNumber";
 import SliderTime from "../../shared-global/SliderTime";
 import ButtonStart from "../shared/ButtonStart";
@@ -31,7 +31,7 @@ const Bubblesort = () => {
       <h2 className="mt-4 text-2xl">Info</h2>
       <div>
         <p>Number of elements:<br/>{numberOfElements}</p>
-        <SliderNumber value={numberOfElements} onChange={setNumberOfElements} setArray={setArray} barRefs={barRefs} />
+        <SliderNumber value={numberOfElements} onChange={setNumberOfElements} setArray={setArray} barRefs={barRefs} generateArrayFunc={generateArray}/>
       </div>
       <div className="mb-40">
         <p>Time per operation, ms:<br/>{timePerOperation}</p>
