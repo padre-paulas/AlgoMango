@@ -5,7 +5,7 @@ import SliderTime from "../../shared-global/SliderTime";
 import ButtonStart from "../shared/ButtonStart";
 import generateArraySorted from "../../shared-global/generate-array-sorted";
 import SliderTarget from "../../shared-global/SliderTarget";
-import simpleSearchFunc from "./simple-search-func-sorted";
+import simpleSearchFuncSorted from "./simple-search-func-sorted";
 import SortedUnsortedToggle from "../../shared-global/SortedUnsortedToggle";
 import generateArray from "../../shared-global/generate-array";
 
@@ -26,7 +26,7 @@ const SimpleSearch = () => {
       <ArrayBars array={array} barRefs={barRefs} />
     </div>
 
-    <ButtonStart array={array} target={target} barRefs={barRefs} timePerOperation={timePerOperation} searchFunc={simpleSearchFunc}/>
+    <ButtonStart array={array} target={target} barRefs={barRefs} timePerOperation={timePerOperation} searchFunc={simpleSearchFuncSorted}/>
       
     </div>
     <div className="grid justify-center text-center m-2

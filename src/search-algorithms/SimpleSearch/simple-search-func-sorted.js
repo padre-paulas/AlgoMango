@@ -1,7 +1,7 @@
 import setColor from "../../shared-global/set-array-bars-color";
 import sleep from "../../shared-global/sleep";
 
-const simpleSearchFunc = async (array, target, barRefs, timePerOperation) => {
+const simpleSearchFuncSorted = async (array, target, barRefs, timePerOperation) => {
   setColor(barRefs, array.length, 'var(--color-amber-glow)')
   for (let i = 0; i < array.length; i++) {
     barRefs.current[i].style.background = 'var(--color-vibrant-coral)';
@@ -14,4 +14,4 @@ const simpleSearchFunc = async (array, target, barRefs, timePerOperation) => {
   }
 }
 
-export default simpleSearchFunc;
+export default simpleSearchFuncSorted;
