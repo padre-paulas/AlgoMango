@@ -5,11 +5,14 @@ import SliderTime from "../../shared-global/SliderTime";
 import ButtonStart from "../shared/ButtonStart";
 import generateArraySorted from "../../shared-global/generate-array-sorted";
 import binarySearchFunc from "./binary-search-func";
+import SliderTarget from "../../shared-global/SliderTarget";
 
 const BinarySearch = () => {
   const [ numberOfElements, setNumberOfElements ] = useState(50);
   const [ timePerOperation, setTimePerOperation ] = useState(50);
   const [ array, setArray ] = useState(generateArraySorted(numberOfElements));
+  const [ target, setTarget ] = useState(() => Math.floor(Math.random() * (array.length - 1)));
+  console.log(target)
   const barRefs = useRef({});
 
   return <div className="flex justify-center h-screen w-screen bg-amber-glow/20">
@@ -21,7 +24,7 @@ const BinarySearch = () => {
       <ArrayBars array={array} barRefs={barRefs} />
     </div>
 
-    <ButtonStart array={array} barRefs={barRefs} timePerOperation={timePerOperation} searchFunc={binarySearchFunc}/>
+    <ButtonStart array={array} target={target} barRefs={barRefs} timePerOperation={timePerOperation} searchFunc={binarySearchFunc}/>
       
     </div>
     <div className="grid justify-center text-center m-2
@@ -33,9 +36,13 @@ const BinarySearch = () => {
         <p>Number of elements:<br/>{numberOfElements}</p>
         <SliderNumber value={numberOfElements} onChange={setNumberOfElements} setArray={setArray} barRefs={barRefs} generateArrayFunc={generateArraySorted}/>
       </div>
-      <div className="mb-40">
+      <div>
         <p>Time per operation, ms:<br/>{timePerOperation}</p>
         <SliderTime value={timePerOperation} onChange={setTimePerOperation} />
+      </div>
+      <div className="mb-40">
+        <p>Target:<br/>{target}</p>
+        <SliderTarget value={target} onChange={setTarget} />
       </div>
     </div>
   </div>
