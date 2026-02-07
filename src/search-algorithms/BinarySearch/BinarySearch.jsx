@@ -4,6 +4,7 @@ import SliderNumber from "../../shared-global/SliderNumber";
 import SliderTime from "../../shared-global/SliderTime";
 import ButtonStart from "../shared/ButtonStart";
 import generateArraySorted from "../../shared-global/generate-array-sorted";
+import binarySearchFunc from "./binary-search-func";
 
 const BinarySearch = () => {
   const [ numberOfElements, setNumberOfElements ] = useState(50);
@@ -20,7 +21,7 @@ const BinarySearch = () => {
       <ArrayBars array={array} barRefs={barRefs} />
     </div>
 
-    <ButtonStart array={array} barRefs={barRefs} timePerOperation={timePerOperation} />
+    <ButtonStart array={array} barRefs={barRefs} timePerOperation={timePerOperation} searchFunc={binarySearchFunc}/>
       
     </div>
     <div className="grid justify-center text-center m-2
