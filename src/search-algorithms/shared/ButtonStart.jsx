@@ -1,5 +1,4 @@
-const ButtonStart = ({ array, barRefs, timePerOperation, searchFunc }) => {
-  const target = 19;
+const ButtonStart = ({ array, target, barRefs, timePerOperation, searchFunc }) => {
   return <button onClick={() => {
     searchFunc(array, target, barRefs, timePerOperation);
   }}
