@@ -12,7 +12,6 @@ const BinarySearch = () => {
   const [ timePerOperation, setTimePerOperation ] = useState(50);
   const [ array, setArray ] = useState(generateArraySorted(numberOfElements));
   const [ target, setTarget ] = useState(() => Math.floor(Math.random() * (array.length - 1)));
-  console.log(target)
   const barRefs = useRef({});
 
   return <div className="flex justify-center h-screen w-screen bg-amber-glow/20">
