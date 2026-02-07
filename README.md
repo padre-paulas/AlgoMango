@@ -5,6 +5,7 @@
 - [x] Dynamic Array Generation
 - [x] Quicksort Visualization 
 - [ ] Merge Sort & Selection Sort
+- [x] Simple and Binary Search
 - [ ] Graph Algorithms
 - [ ] User System 
 ---
@@ -21,3 +22,4 @@ npm install
 ```
 npm run dev
 ```
+
