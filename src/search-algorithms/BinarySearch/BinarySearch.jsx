@@ -23,7 +23,7 @@ const BinarySearch = () => {
       <ArrayBars array={array} barRefs={barRefs} />
     </div>
 
-    <ButtonStart array={array} target={target} barRefs={barRefs} timePerOperation={timePerOperation} searchFunc={binarySearchFunc}/>
+    <ButtonStart array={array} target={target} barRefs={barRefs} timePerOperation={timePerOperation} searchFunc={binarySearchFunc} sorted={true} />
       
     </div>
     <div className="grid justify-center text-center m-2
