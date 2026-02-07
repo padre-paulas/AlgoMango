@@ -5,14 +5,16 @@ import SliderTime from "../../shared-global/SliderTime";
 import ButtonStart from "../shared/ButtonStart";
 import generateArraySorted from "../../shared-global/generate-array-sorted";
 import SliderTarget from "../../shared-global/SliderTarget";
-import simpleSearchFunc from "./simple-search-func";
+import simpleSearchFunc from "./simple-search-func-sorted";
+import SortedUnsortedToggle from "../../shared-global/SortedUnsortedToggle";
+import generateArray from "../../shared-global/generate-array";
 
 const SimpleSearch = () => {
   const [ numberOfElements, setNumberOfElements ] = useState(50);
   const [ timePerOperation, setTimePerOperation ] = useState(50);
   const [ array, setArray ] = useState(generateArraySorted(numberOfElements));
   const [ target, setTarget ] = useState(() => Math.floor(Math.random() * (array.length - 1)));
-  console.log(target)
+  const [ sorted, setSorted ] = useState(true);
   const barRefs = useRef({});
 
   return <div className="flex justify-center h-screen w-screen bg-amber-glow/20">
@@ -33,8 +35,12 @@ const SimpleSearch = () => {
     ">
       <h2 className="mt-4 text-2xl">Info</h2>
       <div>
+        <p>Sorted/Unsorted</p>
+        <SortedUnsortedToggle setSorted={setSorted} sorted={sorted} numberOfElements={numberOfElements} setArray={setArray} barRefs={barRefs} />
+      </div>
+      <div>
         <p>Number of elements:<br/>{numberOfElements}</p>
-        <SliderNumber value={numberOfElements} onChange={setNumberOfElements} setArray={setArray} barRefs={barRefs} generateArrayFunc={generateArraySorted}/>
+        <SliderNumber value={numberOfElements} onChange={setNumberOfElements} setArray={setArray} barRefs={barRefs} generateArrayFunc={sorted ? generateArraySorted : generateArray}/>
       </div>
       <div>
         <p>Time per operation, ms:<br/>{timePerOperation}</p>
