@@ -1,6 +1,6 @@
-const ButtonStart = ({ array, target, barRefs, timePerOperation, searchFunc }) => {
+const ButtonStart = ({ array, target, barRefs, timePerOperation, searchFunc, sorted }) => {
   return <button onClick={() => {
-    searchFunc(array, target, barRefs, timePerOperation);
+    searchFunc(array, target, barRefs, timePerOperation, sorted);
   }}
     className="bg-muted-teal rounded-xl w-30 h-12 
     shadow-[0_0_3px_var(--color-teal-700)] border-2 border-teal-700
