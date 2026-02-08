@@ -7,7 +7,8 @@ const SliderNumber = ({ value, onChange, setArray, barRefs, generateArrayFunc, s
       let val = Number(e.target.value);
       onChange(val);
       setArray(generateArrayFunc(val));
-      Number(target) > val && setTarget(val);
+      Number(target) + 1 > val && setTarget(val - 1);
+      console.log("target: ", target, " val: ", val - 1)
     }}
     onMouseDown={(e) => {
       setColor(barRefs, 0, e.target.value, 'var(--color-amber-glow)');
