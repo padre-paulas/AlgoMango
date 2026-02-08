@@ -12,8 +12,8 @@ const Bubblesort = () => {
   const [ array, setArray ] = useState(generateArray(numberOfElements));
   const barRefs = useRef({});
 
-  return <div className="flex justify-center h-screen w-screen bg-amber-glow/20">
-    <div className="ml-0 w-screen text-midnight-violet
+  return <div className="flex justify-center h-screen w-full">
+    <div className="ml-0 w-full text-midnight-violet
     flex flex-col items-center gap-8 
     ">
     <h1 className="flex items-center text-center justify-center text-4xl mt-4">Bubblesort</h1>
@@ -28,7 +28,7 @@ const Bubblesort = () => {
     bg-amber-glow w-60 text-midnight-violet 
     rounded-xl shadow-[0_0_8px_var(--color-midnight-violet)] border-2 border-midnight-violet/30 
     ">
-      <h2 className="mt-4 text-2xl">Info</h2>
+      <h2 className="mt-4 text-2xl">Controls</h2>
       <div>
         <p>Number of elements:<br/>{numberOfElements}</p>
         <SliderNumber value={numberOfElements} onChange={setNumberOfElements} setArray={setArray} barRefs={barRefs} generateArrayFunc={generateArray}/>
