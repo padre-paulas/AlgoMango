@@ -23,7 +23,7 @@ const SimpleSearch = () => {
     ">
     <h1 className="flex items-center text-center justify-center text-4xl mt-4">Simple Search</h1>
     <div className={`w-[70vw] h-[70vh] rounded-xl shadow-[0_0_8px_var(--color-midnight-violet)]`}>
-      <ArrayBars array={array} barRefs={barRefs} />
+      <ArrayBars array={array} barRefs={barRefs} stretch={!sorted}/>
     </div>
 
     <ButtonStart array={array} target={target} barRefs={barRefs} timePerOperation={timePerOperation} searchFunc={simpleSearchFuncSorted} sorted={sorted} />
@@ -40,7 +40,7 @@ const SimpleSearch = () => {
       </div>
       <div>
         <p>Number of elements:<br/>{numberOfElements}</p>
-        <SliderNumber value={numberOfElements} onChange={setNumberOfElements} setArray={setArray} barRefs={barRefs} generateArrayFunc={sorted ? generateArraySorted : generateArray}/>
+        <SliderNumber value={numberOfElements} onChange={setNumberOfElements} setArray={setArray} barRefs={barRefs} generateArrayFunc={sorted ? generateArraySorted : generateArray} setTarget={setTarget} target={target} />
       </div>
       <div>
         <p>Time per operation, ms:<br/>{timePerOperation}</p>
@@ -48,7 +48,7 @@ const SimpleSearch = () => {
       </div>
       <div className="mb-40">
         <p>Target:<br/>{target}</p>
-        <SliderTarget value={target} onChange={setTarget} />
+        <SliderTarget value={target} onChange={setTarget} numberOfElements={numberOfElements} />
       </div>
     </div>
   </div>
