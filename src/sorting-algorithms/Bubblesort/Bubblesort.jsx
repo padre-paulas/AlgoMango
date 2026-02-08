@@ -18,7 +18,7 @@ const Bubblesort = () => {
     ">
     <h1 className="flex items-center text-center justify-center text-4xl mt-4">Bubblesort</h1>
     <div className={`w-[70vw] h-[70vh] rounded-xl shadow-[0_0_8px_var(--color-midnight-violet)]`}>
-      <ArrayBars array={array} barRefs={barRefs} />
+      <ArrayBars array={array} barRefs={barRefs} stretch={true}/>
     </div>
 
     <ButtonStart array={array} barRefs={barRefs} timePerOperation={timePerOperation} sortFunc={bubblesortFunc}/>
