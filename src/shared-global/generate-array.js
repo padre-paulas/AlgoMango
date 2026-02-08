@@ -1,15 +1,11 @@
 const generateArray = (numberOfElements) => {
   let array = Array.from({ length: numberOfElements }, 
-  () => Math.floor(Math.random() * 100));
+  (_, i) => i);
+  for (let i = numberOfElements - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
   return array;
 }
 
 export default generateArray;
-
-/** 
-* @note
-* Think about doing "random" array generation differently.
-* Generate a sorted array first, then shuffle the elements.
-* This way you will always know you can search elements values
-* by IDs.
-*/
