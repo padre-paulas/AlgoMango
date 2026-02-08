@@ -6,11 +6,11 @@ const simpleSearchFuncSorted = async (array, target, barRefs, timePerOperation, 
   for (let i = 0; i < array.length; i++) {
     barRefs.current[i].style.background = 'var(--color-vibrant-coral)';
     await sleep(timePerOperation);
-    if (sorted && i === target - 1) {
+    if (sorted && i === target) {
       barRefs.current[i].style.background = 'var(--color-midnight-violet)';
       return i;
     }
-    if (!sorted && array[i] === target - 1) {
+    if (!sorted && array[i] === target) {
       barRefs.current[i].style.background = 'var(--color-midnight-violet)';
       return i;
     }
