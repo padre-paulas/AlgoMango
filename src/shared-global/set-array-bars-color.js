@@ -1,5 +1,5 @@
-const setColor = (barRefs, value, color) =>  {
-  for (let i = 0; i < value; i++) {
+const setColor = (barRefs, from, until, color) =>  {
+  for (let i = from; i < until; i++) {
     barRefs.current[i].style.background = color;
   }
 }
