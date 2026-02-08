@@ -9,8 +9,8 @@ function App() {
     <>
       {/* <Quicksort/> */}
       {/* <Bubblesort /> */}
-      {/* <BinarySearch /> */}
-      <SimpleSearch />
+      <BinarySearch />
+      {/* <SimpleSearch /> */}
     </>
   )
 }

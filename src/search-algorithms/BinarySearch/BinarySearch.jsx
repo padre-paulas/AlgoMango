@@ -33,7 +33,7 @@ const BinarySearch = () => {
       <h2 className="mt-4 text-2xl">Info</h2>
       <div>
         <p>Number of elements:<br/>{numberOfElements}</p>
-        <SliderNumber value={numberOfElements} onChange={setNumberOfElements} setArray={setArray} barRefs={barRefs} generateArrayFunc={generateArraySorted}/>
+        <SliderNumber value={numberOfElements} onChange={setNumberOfElements} setArray={setArray} barRefs={barRefs} generateArrayFunc={generateArraySorted} setTarget={setTarget} target={target}/>
       </div>
       <div>
         <p>Time per operation, ms:<br/>{timePerOperation}</p>
@@ -41,7 +41,7 @@ const BinarySearch = () => {
       </div>
       <div className="mb-40">
         <p>Target:<br/>{target}</p>
-        <SliderTarget value={target} onChange={setTarget} />
+        <SliderTarget value={target} onChange={setTarget} numberOfElements={numberOfElements}/>
       </div>
     </div>
   </div>
