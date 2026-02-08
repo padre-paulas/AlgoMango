@@ -17,8 +17,8 @@ const SimpleSearch = () => {
   const [ sorted, setSorted ] = useState(true);
   const barRefs = useRef({});
 
-  return <div className="flex justify-center h-screen w-screen bg-amber-glow/20">
-    <div className="ml-0 w-screen text-midnight-violet
+  return <div className="flex justify-center h-screen w-full">
+    <div className="ml-0 w-full text-midnight-violet
     flex flex-col items-center gap-8 
     ">
     <h1 className="flex items-center text-center justify-center text-4xl mt-4">Simple Search</h1>
