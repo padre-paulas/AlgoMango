@@ -14,8 +14,8 @@ const BinarySearch = () => {
   const [ target, setTarget ] = useState(() => Math.floor(Math.random() * (array.length - 1)));
   const barRefs = useRef({});
 
-  return <div className="flex justify-center h-screen w-screen bg-amber-glow/20">
-    <div className="ml-0 w-screen text-midnight-violet
+  return <div className="flex justify-center h-screen w-full">
+    <div className="ml-0 w-full text-midnight-violet
     flex flex-col items-center gap-8 
     ">
     <h1 className="flex items-center text-center justify-center text-4xl mt-4">Binary Search</h1>
@@ -33,7 +33,7 @@ const BinarySearch = () => {
       <h2 className="mt-4 text-2xl">Info</h2>
       <div>
         <p>Number of elements:<br/>{numberOfElements}</p>
-        <SliderNumber value={numberOfElements} onChange={setNumberOfElements} setArray={setArray} barRefs={barRefs} generateArrayFunc={generateArraySorted}/>
+        <SliderNumber value={numberOfElements} onChange={setNumberOfElements} setArray={setArray} barRefs={barRefs} generateArrayFunc={generateArraySorted} setTarget={setTarget} target={target}/>
       </div>
       <div>
         <p>Time per operation, ms:<br/>{timePerOperation}</p>
@@ -41,7 +41,7 @@ const BinarySearch = () => {
       </div>
       <div className="mb-40">
         <p>Target:<br/>{target}</p>
-        <SliderTarget value={target} onChange={setTarget} />
+        <SliderTarget value={target} onChange={setTarget} numberOfElements={numberOfElements}/>
       </div>
     </div>
   </div>
