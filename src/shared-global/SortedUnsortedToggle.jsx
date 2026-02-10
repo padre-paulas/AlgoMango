@@ -7,7 +7,7 @@ const SortedUnsortedToggle = ({ sorted, setSorted, numberOfElements, setArray, b
   onClick={() => {
     let nextSorted = !sorted;
     setSorted(nextSorted);
-    setColor(barRefs, numberOfElements, 'var(--color-amber-glow)')
+    setColor(barRefs, 0, numberOfElements, 'var(--color-amber-glow)')
     setArray((nextSorted ? generateArraySorted(numberOfElements) : generateArray(numberOfElements)));
   }}
   >

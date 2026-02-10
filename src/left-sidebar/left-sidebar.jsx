@@ -1,13 +1,16 @@
+import mangoLogo from "../assets/mango-logo-2.png";
 const LeftSidebar = ({ setCurrentPage }) => {
   return <div className="group justify-center text-center m-2
     bg-muted-teal/60 hover:bg-muted-teal
     w-15 text-midnight-violet 
     rounded-xl shadow-[0_0_8px_var(--color-midnight-violet)] border-2 border-midnight-violet/30 
-    hover:w-60 transition-all ease-in-out duration-200
+    hover:w-60 transition-all ease-out duration-200
     ">
-      <h2 className="mt-4 text-2xl ">🥭</h2>
+      <h2 className="flex mt-4 text-2xl my-2 justify-center">
+        <img src={mangoLogo} alt="AlgoMango" className="w-12 h-12"/>
+      </h2>
       <div className="flex flex-col gap-6 mb-auto mt-6 h-full [&_button]:cursor-pointer 
-      [&_button]:hover:text-amber-glow **:text-lg
+      [&_button]:hover:text-amber-glow **:text-lg 
       ">
 
         <div>
