@@ -1,4 +1,4 @@
-# 🥭 AlgoMango
+# <img src="./src/assets/mango-logo-2.png" style="height: 40px; width: 40px" />AlgoMango
 ### AlgoMango is an algorithm visualizer built with **React** and **Tailwind CSS**. It bridges the gap between abstract computer science concepts and visual intuition. 
 ---
 ### 🚧 Current Status
@@ -22,4 +22,5 @@ npm install
 ```
 npm run dev
 ```
+
 
