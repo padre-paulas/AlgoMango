@@ -28,6 +28,13 @@ const LeftSidebar = ({ setCurrentPage }) => {
         </div>
 
         <div>
+          <button onClick={() => setCurrentPage("Bogosort")}>
+            <span className="group-hover:hidden transition-all ease-in-out">Q</span>
+            <span className="hidden group-hover:block transition-all ease-in-out">Bogosort</span>
+            </button>
+        </div>
+
+        <div>
           <button onClick={() => setCurrentPage("SimpleSearch")}>
             <span className="group-hover:hidden transition-all ease-in-out">S</span>
             <span className="hidden group-hover:block transition-all ease-in-out">Simple Search</span>
