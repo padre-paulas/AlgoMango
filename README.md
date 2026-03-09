@@ -3,10 +3,10 @@
 ---
 ### 🚧 Current Status
 - [x] Dynamic Array Generation
-- [x] Quicksort Visualization 
+- [x] Quicksort Visualization
+- [x] Bogo Sort
 - [ ] Merge Sort
 - [ ] Selection Sort
-- [ ] Bogo Sort
 - [x] Simple and Binary Search
 - [ ] Graph Algorithms
 - [ ] User System 
@@ -24,6 +24,7 @@ npm install
 ```
 npm run dev
 ```
+
 
 
 
