@@ -6,6 +6,7 @@
 - [x] Quick Sort Visualization
 - [x] Bubble Sort
 - [x] Bogo Sort
+- [ ] Insertion Sort
 - [ ] Merge Sort
 - [ ] Selection Sort
 - [x] Simple and Binary Search
@@ -25,6 +26,7 @@ npm install
 ```
 npm run dev
 ```
+
 
 
 
