@@ -3,7 +3,8 @@
 ---
 ### 🚧 Current Status
 - [x] Dynamic Array Generation
-- [x] Quicksort Visualization
+- [x] Quick Sort Visualization
+- [x] Bubble Sort
 - [x] Bogo Sort
 - [ ] Merge Sort
 - [ ] Selection Sort
@@ -24,6 +25,7 @@ npm install
 ```
 npm run dev
 ```
+
 
 
 
