@@ -1,7 +1,7 @@
 const ArrayBars = ({ array = [], barRefs, stretch }) => {
   const width = 100 / array.length;
   const stretchFactor = 100 / array.length;
-  return <div  className="flex items-end place-self-center w-[98%] h-full">
+  return <div  className="flex items-end place-self-center w-full h-full px-3 py-1">
     {array.map((element, i) => {
       return <div key={i} ref={(element) => barRefs.current[i] = element}
       className={`
