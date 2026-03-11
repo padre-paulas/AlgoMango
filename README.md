@@ -8,6 +8,8 @@
 - [x] Bogo Sort
 - [ ] Insertion Sort
 - [ ] Merge Sort
+- [ ] Bitonic Sort
+- [ ] Radix Sort
 - [ ] Selection Sort
 - [x] Simple and Binary Search
 - [ ] Graph Algorithms
@@ -26,6 +28,7 @@ npm install
 ```
 npm run dev
 ```
+
 
 
 
