@@ -1,4 +1,4 @@
-const generateArray = (numberOfElements: number) => {
+const generateArray = (numberOfElements: number): number[] => {
   let array: number[] = Array.from({ length: numberOfElements }, 
   (_, i) => i);
   for (let i = numberOfElements - 1; i > 0; i--) {
