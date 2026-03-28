@@ -1,5 +1,5 @@
-const generateArray = (numberOfElements) => {
-  let array = Array.from({ length: numberOfElements }, 
+const generateArray = (numberOfElements: number) => {
+  let array: number[] = Array.from({ length: numberOfElements }, 
   (_, i) => i);
   for (let i = numberOfElements - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
