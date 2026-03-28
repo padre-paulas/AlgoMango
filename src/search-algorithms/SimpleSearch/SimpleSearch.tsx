@@ -12,10 +12,10 @@ import generateArray from "../../shared-global/generate-array";
 const SimpleSearch = () => {
   const [ numberOfElements, setNumberOfElements ] = useState(50);
   const [ timePerOperation, setTimePerOperation ] = useState(50);
-  const [ array, setArray ] = useState(generateArraySorted(numberOfElements));
-  const [ target, setTarget ] = useState(() => Math.floor(Math.random() * (array.length - 1)));
+  const [ array, setArray ] = useState<number[]>(() => generateArraySorted(numberOfElements));
+  const [ target, setTarget ] = useState(() => Math.floor(Math.random() * (numberOfElements - 1)));
   const [ sorted, setSorted ] = useState(true);
-  const barRefs = useRef({});
+  const barRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   return <div className="flex justify-center h-screen w-full">
     <div className="ml-0 w-full text-midnight-violet
