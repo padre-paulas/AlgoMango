@@ -20,7 +20,6 @@ const SliderNumber = ({ value, onChange, setArray, barRefs, generateArrayFunc, s
       onChange(val);
       setArray(generateArrayFunc(val));
       Number(target) + 1 > val && setTarget(val - 1);
-      console.log("target: ", target, " val: ", val - 1)
     }}
     onMouseDown={(e) => {
       const target = e.target as HTMLInputElement;
