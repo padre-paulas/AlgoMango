@@ -6,6 +6,7 @@ import Bubblesort from './sorting-algorithms/Bubblesort/Bubblesort'
 import BinarySearch from './search-algorithms/BinarySearch/BinarySearch'
 import SimpleSearch from './search-algorithms/SimpleSearch/SimpleSearch'
 import Bogosort from './sorting-algorithms/Bogosort/Bogosort'
+import AuthPage from './auth/auth-page'
 
 function App() {
   const [ currentPage, setCurrentPage ] = useState("Quicksort")
@@ -32,6 +33,8 @@ const SwitchPage = ({ currentPage }) => {
       return <BinarySearch/>
     case "Bogosort":
       return <Bogosort/>
+    case "Sign In":
+      return <AuthPage/>
     default:
       return <Quicksort/>
   }

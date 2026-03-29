@@ -48,6 +48,13 @@ const LeftSidebar = ({ setCurrentPage }) => {
             </button>
         </div>
 
+        <div>
+          <button onClick={() => setCurrentPage("Sign In")}>
+            <span className="group-hover:hidden transition-all ease-in-out">S</span>
+            <span className="hidden group-hover:block transition-all ease-in-out">Sign In</span>
+            </button>
+        </div>
+
       </div>
     </div>
 }
