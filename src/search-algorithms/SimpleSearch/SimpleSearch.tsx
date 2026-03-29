@@ -26,7 +26,7 @@ const SimpleSearch = () => {
       <ArrayBars array={array} barRefs={barRefs} stretch={!sorted}/>
     </div>
 
-    <ButtonStart array={array} target={target} barRefs={barRefs} timePerOperation={timePerOperation} searchFunc={simpleSearchFuncSorted} sorted={sorted} />
+    <ButtonStart searchFunc={() => simpleSearchFuncSorted(array, target, barRefs, timePerOperation, sorted)} />
       
     </div>
     <div className="grid justify-center text-center m-2
