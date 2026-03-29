@@ -1,4 +1,12 @@
-const SliderTarget = ({ value, onChange, numberOfElements }) => {
+import { Dispatch, SetStateAction } from "react";
+
+interface SliderTargetProps {
+  value: number;
+  onChange: Dispatch<SetStateAction<number>>;
+  numberOfElements: number;
+}
+
+const SliderTarget = ({ value, onChange, numberOfElements }: SliderTargetProps) => {
   return <input className="h-1 w-35 bg-transparent" 
     min={0} max={numberOfElements - 1} value={value} type="range"
     style={{ accentColor: 'var(--color-midnight-violet)' }}

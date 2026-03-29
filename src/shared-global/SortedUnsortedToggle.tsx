@@ -1,9 +1,18 @@
+import { Dispatch, SetStateAction } from "react";
 import generateArray from "./generate-array";
 import generateArraySorted from "./generate-array-sorted";
 import setColor from "./set-array-bars-color";
 
-const SortedUnsortedToggle = ({ sorted, setSorted, numberOfElements, setArray, barRefs }) => {
-  return <button className={`h-7 w-16 bg-white rounded-full flex justify-center items-center text-center bg-center m-auto my-4 shadow-[inset_0_0_2px_var(--color-midnight-violet)]`} value={sorted}
+interface SortedUnsortedToggleProps {
+  sorted: boolean;
+  setSorted: Dispatch<SetStateAction<boolean>>;
+  numberOfElements: number;
+  setArray: Dispatch<SetStateAction<number[]>>;
+  barRefs: React.RefObject<(HTMLDivElement | null)[]>;
+}
+
+const SortedUnsortedToggle = ({ sorted, setSorted, numberOfElements, setArray, barRefs }: SortedUnsortedToggleProps) => {
+  return <button className={`h-7 w-16 bg-white rounded-full flex justify-center items-center text-center bg-center m-auto my-4 shadow-[inset_0_0_2px_var(--color-midnight-violet)]`} // value={sorted}
   onClick={() => {
     let nextSorted = !sorted;
     setSorted(nextSorted);

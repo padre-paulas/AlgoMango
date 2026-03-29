@@ -1,6 +1,12 @@
+import sleep from "../../shared-global/sleep";
 import setColor from "../../shared-global/set-array-bars-color";
 
-const binarySearchFunc = async (array, target, barRefs, timePerOperation) => {
+const binarySearchFunc = async (
+  array: number[],
+  target: number, 
+  barRefs: React.RefObject<(HTMLDivElement | null)[]>, 
+  timePerOperation: number
+) => {
   let left = 0;
   let right = array.length - 1;
   let pivotIndex;
@@ -9,12 +15,15 @@ const binarySearchFunc = async (array, target, barRefs, timePerOperation) => {
     
     setColor(barRefs, left, right + 1, 'var(--color-muted-teal)')
     await sleep(timePerOperation);
-    barRefs.current[pivotIndex].style.background = 'var(--color-vibrant-coral)';
+
+    const pivotBar = barRefs.current[pivotIndex];
+    if (!pivotBar) return -1;
+    pivotBar.style.background = 'var(--color-vibrant-coral)';
     await sleep(timePerOperation);
     setColor(barRefs, left, right + 1, 'var(--color-amber-glow')
     
     if (pivotIndex === target) {
-      barRefs.current[pivotIndex].style.background = 'var(--color-midnight-violet)';
+      pivotBar.style.background = 'var(--color-midnight-violet)';
       return pivotIndex; 
     }
     if (pivotIndex > target) {
@@ -22,11 +31,9 @@ const binarySearchFunc = async (array, target, barRefs, timePerOperation) => {
     } else {
       left = pivotIndex + 1;
     }
-    barRefs.current[pivotIndex].style.background = 'var(--color-amber-glow';
+    pivotBar.style.background = 'var(--color-amber-glow';
   }
   return -1;
 }
-
-const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 export default binarySearchFunc;

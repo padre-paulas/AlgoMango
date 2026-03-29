@@ -1,6 +1,10 @@
-const ButtonStart = ({ array, target, barRefs, timePerOperation, searchFunc, sorted }) => {
+interface ButtonStartProps {
+  searchFunc: () => Promise<number>;
+}
+
+const ButtonStart = ({ searchFunc }: ButtonStartProps) => {
   return <button onClick={() => {
-    searchFunc(array, target, barRefs, timePerOperation, sorted);
+    searchFunc();
   }}
     className="bg-muted-teal rounded-xl w-30 h-12 
     shadow-[0_0_3px_var(--color-teal-700)] border-2 border-teal-700

@@ -1,7 +1,7 @@
 import setColor from "./set-array-bars-color";
 import React, { Dispatch, SetStateAction } from 'react';
 
-interface SliderProps {
+interface SliderNumberProps {
   value: number;
   onChange: (e: number) => void;
   setArray: Dispatch<SetStateAction<number[]>>;
@@ -11,7 +11,7 @@ interface SliderProps {
   target: number;
 }
 
-const SliderNumber = ({ value, onChange, setArray, barRefs, generateArrayFunc, setTarget, target }: SliderProps) => {
+const SliderNumber = ({ value, onChange, setArray, barRefs, generateArrayFunc, setTarget, target }: SliderNumberProps) => {
   return <input className="h-1 w-35 bg-transparent" 
     min="1" max="100" value={value} type="range"
     style={{ accentColor: 'var(--color-midnight-violet)' }}
@@ -20,7 +20,6 @@ const SliderNumber = ({ value, onChange, setArray, barRefs, generateArrayFunc, s
       onChange(val);
       setArray(generateArrayFunc(val));
       Number(target) + 1 > val && setTarget(val - 1);
-      console.log("target: ", target, " val: ", val - 1)
     }}
     onMouseDown={(e) => {
       const target = e.target as HTMLInputElement;

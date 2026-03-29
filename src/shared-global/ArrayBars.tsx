@@ -10,8 +10,7 @@ const ArrayBars = ({ array = [], barRefs, stretch }: ArrayBarsProps) => {
   return <div  className="flex items-end place-self-center w-full h-full px-3 py-1">
     {array.map((element, i) => {
       return <div key={i} ref={(element) => {
-        let bar = barRefs.current[i];
-        if (bar) bar = element;
+        barRefs.current[i] = element;
       }}
       className={`
         bg-amber-glow flex rounded-sm border border-midnight-violet/30`} style={{ 
