@@ -1,7 +1,7 @@
 import setColor from "../../shared-global/set-array-bars-color";
 import sleep from "../../shared-global/sleep";
 
-const simpleSearchFuncSorted = async (
+const simpleSearchFunc = async (
   array: number[], 
   target: number, 
   barRefs: React.RefObject<(HTMLDivElement | null)[]>, 
@@ -26,4 +26,4 @@ const simpleSearchFuncSorted = async (
   return -1;
 }
 
-export default simpleSearchFuncSorted;
+export default simpleSearchFunc;
