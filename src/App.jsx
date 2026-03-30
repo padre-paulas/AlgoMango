@@ -14,7 +14,6 @@ function App() {
     <>
       <div className='w-screen h-screen flex flex-row bg-amber-glow/20 overflow-hidden'>
         <LeftSidebar setCurrentPage={setCurrentPage}/>
-
         <SwitchPage currentPage={currentPage} />
       </div>
     </>
