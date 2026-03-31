@@ -22,42 +22,42 @@ const LeftSidebar = ({ setCurrentPage }: LeftSidebarProps) => {
       ">
 
         <div>
-        <button onClick={() => setCurrentPage("Bubblesort")}>
+        <button data-testid="nav-bubblesort" onClick={() => setCurrentPage("Bubblesort")}>
           <span className="group-hover:hidden transition-all ease-in-out">B</span>
           <span className="hidden group-hover:block transition-all ease-in-out">Bubblesort</span>
           </button>
         </div>
 
         <div>
-          <button onClick={() => setCurrentPage("Quicksort")}>
+          <button data-testid="nav-quicksort" onClick={() => setCurrentPage("Quicksort")}>
             <span className="group-hover:hidden transition-all ease-in-out">Q</span>
             <span className="hidden group-hover:block transition-all ease-in-out">Quicksort</span>
             </button>
         </div>
 
         <div>
-          <button onClick={() => setCurrentPage("Bogosort")}>
-            <span className="group-hover:hidden transition-all ease-in-out">Q</span>
+          <button data-testid="nav-bogosort" onClick={() => setCurrentPage("Bogosort")}>
+            <span className="group-hover:hidden transition-all ease-in-out">Bo</span>
             <span className="hidden group-hover:block transition-all ease-in-out">Bogosort</span>
             </button>
         </div>
 
         <div>
-          <button onClick={() => setCurrentPage("SimpleSearch")}>
+          <button data-testid="nav-simple-search" onClick={() => setCurrentPage("SimpleSearch")}>
             <span className="group-hover:hidden transition-all ease-in-out">S</span>
             <span className="hidden group-hover:block transition-all ease-in-out">Simple Search</span>
             </button>
         </div>
 
         <div>
-          <button onClick={() => setCurrentPage("BinarySearch")}>
+          <button data-testid="nav-binary-search" onClick={() => setCurrentPage("BinarySearch")}>
             <span className="group-hover:hidden transition-all ease-in-out">Bi</span>
-            <span className="hidden group-hover:block transition-all ease-in-out">Binary Seach</span>
+            <span className="hidden group-hover:block transition-all ease-in-out">Binary Search</span>
             </button>
         </div>
 
         <div>
-          <button onClick={() => setCurrentPage("Sign In")}>
+          <button data-testid="nav-sign-in" onClick={() => setCurrentPage("Sign In")}>
             <span className="group-hover:hidden transition-all ease-in-out">S</span>
             <span className="hidden group-hover:block transition-all ease-in-out">Sign In</span>
             </button>
