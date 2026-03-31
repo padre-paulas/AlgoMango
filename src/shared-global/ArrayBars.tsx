@@ -13,7 +13,7 @@ const ArrayBars = ({ array = [], barRefs, stretch }: ArrayBarsProps) => {
         barRefs.current[i] = element;
       }}
       className={`
-        bg-amber-glow flex rounded-sm border border-midnight-violet/30`} style={{ 
+        bg-amber-glow flex rounded-t-xl rounded-b-md border border-midnight-violet/30`} style={{ 
         height: `${stretch ? element * stretchFactor : element}%`, width: `${width}%` 
       }}></div>
     })}

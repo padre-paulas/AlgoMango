@@ -1,5 +1,13 @@
+import { SetStateAction } from "react";
+import { Dispatch } from "react";
 import mangoLogo from "../assets/mango-logo-2.png";
-const LeftSidebar = ({ setCurrentPage }) => {
+import { pageName } from "../App";
+
+interface LeftSidebarProps {
+  setCurrentPage: Dispatch<SetStateAction<pageName>>;
+}
+
+const LeftSidebar = ({ setCurrentPage }: LeftSidebarProps) => {
   return <div className="group justify-center text-center m-2
     bg-muted-teal/60 hover:bg-muted-teal
     w-15 text-midnight-violet 
