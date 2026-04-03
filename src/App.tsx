@@ -8,7 +8,7 @@ import SimpleSearch from './search-algorithms/SimpleSearch/SimpleSearch'
 import Bogosort from './sorting-algorithms/Bogosort/Bogosort'
 import AuthPage from './auth/auth-page'
 
-export type pageName =
+export type PageName =
 | "Quicksort"
 | "Bubblesort"
 | "SimpleSearch"
@@ -17,7 +17,7 @@ export type pageName =
 | "Sign In";
 
 function App() {
-  const [ currentPage, setCurrentPage ] = useState<pageName>("Quicksort")
+  const [ currentPage, setCurrentPage ] = useState<PageName>("Quicksort")
   return (
     <>
       <div className='w-screen h-screen flex flex-row bg-amber-glow/20 overflow-hidden'>
@@ -29,7 +29,7 @@ function App() {
 }
 
 interface SwitchPageProps {
-  currentPage: pageName;
+  currentPage: PageName;
 }
 
 const SwitchPage = ({ currentPage }: SwitchPageProps) => {

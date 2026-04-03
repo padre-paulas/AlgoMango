@@ -1,10 +1,9 @@
-import { SetStateAction } from "react";
-import { Dispatch } from "react";
+import { Dispatch, SetStateAction } from "react";
 import mangoLogo from "../assets/mango-logo-2.png";
-import { pageName } from "../App";
+import { PageName } from "../App";
 
 interface LeftSidebarProps {
-  setCurrentPage: Dispatch<SetStateAction<pageName>>;
+  setCurrentPage: Dispatch<SetStateAction<PageName>>;
 }
 
 const LeftSidebar = ({ setCurrentPage }: LeftSidebarProps) => {
