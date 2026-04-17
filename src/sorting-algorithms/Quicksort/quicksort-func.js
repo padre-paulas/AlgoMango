@@ -1,4 +1,10 @@
-const quicksortFunc = async (array, barRefs, timePerOperation, left = 0, right = array.length - 1) => {
+const quicksortFunc = async (
+  array, 
+  barRefs, 
+  timePerOperation, 
+  left = 0, 
+  right = array.length - 1
+) => {
   if (left < right) {
     const pivotIndex = await partition(array, barRefs, timePerOperation, left, right);
     quicksortFunc(array, barRefs, timePerOperation, left, pivotIndex - 1);
@@ -41,3 +47,4 @@ const partition = async (array, barRefs, timePerOperation, left, right) => {
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 export default quicksortFunc;
+
