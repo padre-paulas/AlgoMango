@@ -7,8 +7,8 @@ interface SliderNumberProps {
   setArray: Dispatch<SetStateAction<number[]>>;
   barRefs: React.RefObject<(HTMLDivElement | null)[]>;
   generateArrayFunc: (n: number) => number[];
-  setTarget: Dispatch<SetStateAction<number>>;
-  target: number;
+  setTarget: Dispatch<SetStateAction<number>> | null;
+  target: number | null;
 }
 
 const SliderNumber = ({ value, onChange, setArray, barRefs, generateArrayFunc, setTarget, target }: SliderNumberProps) => {
@@ -19,7 +19,7 @@ const SliderNumber = ({ value, onChange, setArray, barRefs, generateArrayFunc, s
       let val = Number(e.target.value);
       onChange(val);
       setArray(generateArrayFunc(val));
-      Number(target) + 1 > val && setTarget(val - 1);
+      if (setTarget) { Number(target) + 1 > val && setTarget(val - 1); };
     }}
     onMouseDown={(e) => {
       const target = e.target as HTMLInputElement;

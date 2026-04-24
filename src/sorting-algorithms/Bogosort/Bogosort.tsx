@@ -2,26 +2,27 @@ import { useRef, useState } from "react";
 import ArrayBars from "../../shared-global/ArrayBars";
 import SliderNumber from "../../shared-global/SliderNumber";
 import SliderTime from "../../shared-global/SliderTime";
-import quicksortFunc from "./quicksort-func";
 import ButtonStart from "../shared/ButtonStart";
 import generateArray from "../../shared-global/generate-array";
+import bogosortFunc from './bogosort-func';
 
-const Quicksort = () => {
-  const [ numberOfElements, setNumberOfElements ] = useState(50);
-  const [ timePerOperation, setTimePerOperation ] = useState(50);
-  const [ array, setArray ] = useState(generateArray(numberOfElements));
-  const barRefs = useRef({});
+const Bogosort = () => {
+  const [ numberOfElements, setNumberOfElements ] = useState<number>(50);
+  const [ timePerOperation, setTimePerOperation ] = useState<number>(50);
+  const [ array, setArray ] = useState<number[]>(generateArray(numberOfElements));
+  const barRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  return <div className="flex justify-center h-screen w-screen">
+  return <div className="flex justify-center h-screen w-full">
     <div className="ml-0 w-full text-midnight-violet
     flex flex-col items-center gap-8 
     ">
-    <h1 className="flex items-center text-center justify-center text-4xl mt-4">Quicksort</h1>
+    <h1 className="flex items-center text-center justify-center text-4xl mt-4">Bogosort</h1>
     <div className={`w-[70vw] h-[70vh] rounded-xl shadow-[0_0_8px_var(--color-midnight-violet)]`}>
       <ArrayBars array={array} barRefs={barRefs} stretch={true}/>
     </div>
 
-    <ButtonStart array={array} barRefs={barRefs} timePerOperation={timePerOperation} sortFunc={quicksortFunc}/>
+    {/* <ButtonStart array={array} barRefs={barRefs} timePerOperation={timePerOperation} sortFunc={bogosortFunc}/> */}
+    <ButtonStart sortFunc={() => bogosortFunc(array, barRefs, timePerOperation)} />
       
     </div>
     <div className="grid justify-center text-center m-2
@@ -31,7 +32,8 @@ const Quicksort = () => {
       <h2 className="mt-4 text-2xl">Controls</h2>
       <div>
         <p>Number of elements:<br/>{numberOfElements}</p>
-        <SliderNumber value={numberOfElements} onChange={setNumberOfElements} setArray={setArray} barRefs={barRefs} generateArrayFunc={generateArray}/>
+        <SliderNumber value={numberOfElements} onChange={setNumberOfElements} setArray={setArray} 
+        barRefs={barRefs} generateArrayFunc={generateArray} setTarget={null} target={null} />
       </div>
       <div className="mb-40">
         <p>Time per operation, ms:<br/>{timePerOperation}</p>
@@ -41,4 +43,4 @@ const Quicksort = () => {
   </div>
 }
 
-export default Quicksort;
+export default Bogosort;

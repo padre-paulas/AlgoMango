@@ -52,3 +52,4 @@ const isSorted = async (
 }
 
 export default bogosortFunc;
+

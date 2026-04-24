@@ -33,6 +33,7 @@ const bubblesortFunc = async (array, barRefs, timePerOperation) => {
     }
     await sleep(timePerOperation);
   }
+  return array;
 }
 
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
